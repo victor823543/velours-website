@@ -1,0 +1,60 @@
+
+.mainContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    z-index: 2;
+}
+
+.blackScreen {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 100%;
+    background-color: black;
+    z-index: 3;
+}
+
+.mainScreen {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 100%;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainScreen > div {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 10vh;
+}
+
+.mainScreen > p {
+    margin-top: 10vh;
+}
+
+.mainScreen p {
+    filter: blur(10px);
+    opacity: 0;
+
+}
+
+.mainContainer img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    z-index: 4;
+    object-fit: cover;
+    transform: scale(0);
+    border-radius: 190px;
+}

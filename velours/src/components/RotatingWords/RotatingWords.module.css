@@ -1,0 +1,17 @@
+
+.rotatingWord {
+    font-size: 4rem;
+    font-weight: 400;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    perspective-origin: left;
+    transform-origin: left;
+}
+
+.wordWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    perspective: 2000px;
+    width: 100%;
+}

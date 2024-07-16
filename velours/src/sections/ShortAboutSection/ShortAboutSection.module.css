@@ -1,0 +1,112 @@
+.mainContainer {
+    padding: 5rem 2rem;
+}
+
+.h1 {
+    font-size: 4.5rem;
+    text-indent: 50vw;
+    overflow-wrap: break-word;
+    text-wrap: balance;
+}
+
+.span {
+    opacity: .5;
+}
+
+.p {
+    font-size: 1.5rem;
+}
+
+.infoTextContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoTextContainer > p:nth-of-type(1) {
+    min-width: 20vw;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listContainer {
+    width: 45vw;
+}
+
+.listItem {
+    border-bottom: 1px dashed rgba(128, 128, 128, 0.55);
+}
+
+.instaLink {
+    cursor: pointer;
+}
+
+.videoAboutContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.videoContainer {
+    width: 40vw;
+}
+
+.videoContainer > video {
+    width: 101%;
+    z-index: -1;
+    border: 5px solid black;
+    border-radius: 14px;
+}
+
+.qrContainer {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .infoTextContainer {
+        flex-direction: row;
+        gap: 10rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .videoContainer {
+        display: none;
+    }
+
+    .listContainer {
+        width: clamp(20rem, 15vw, 30rem);
+    }
+
+    .p {
+        font-size: 1rem;
+    }
+
+    .outerContainer {
+        width: 100%;
+        display: flex;
+        gap: 5rem;
+    }
+
+    .infoTextContainer > p:nth-of-type(1) {
+        min-width: 15vw;
+        text-wrap: nowrap;
+    }
+
+    .infoTextContainer > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .instaLink {
+        display: none;
+    }
+
+    .qrContainer {
+        width: fit-content;
+        display: block;
+    }
+
+}

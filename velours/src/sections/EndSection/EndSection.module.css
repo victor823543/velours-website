@@ -1,0 +1,38 @@
+
+.mainContainer {
+    padding: 10rem 0 30rem;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(223, 223, 223));
+    overflow-x: hidden;
+}
+
+
+.h1 {
+    font-weight: 400;
+    font-size: 19vw;
+    text-align: center;
+    letter-spacing: 2.5vw;
+    margin: 0;
+}
+
+.h2 {
+    font-weight: 400;
+    font-size: min(1.6rem, 3vw);
+    text-align: center;
+    letter-spacing: 3.5vw;
+    margin: 0;
+    position: relative;
+    top: -2vw;
+}
+
+@media (min-width: 768px) {
+    .h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .h2 {
+        text-align: start;
+        margin-left: 20vw;
+    }
+}

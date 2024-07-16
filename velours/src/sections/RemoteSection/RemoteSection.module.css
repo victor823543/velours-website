@@ -1,0 +1,120 @@
+.mainContainer {
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.leftSection {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.videoContainer {
+    margin-top: 50%;
+    width: 45vw;
+}
+
+.videoContainer > video {
+    width: 101%;
+    z-index: -1;
+    border: 5px solid black;
+    border-radius: 14px;
+}
+
+.remoteContainer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: fit-content;
+    padding: 2rem 2rem;
+    border-radius: 1.2rem;
+}
+
+.remoteContainer > img {
+    width: 60%;
+}
+
+.listContainer {
+    width: 100%;
+}
+
+.listItem {
+    width: 100%;
+    border-bottom: dashed 1px rgba(0, 0, 0, 0.2);
+}
+
+.listItem p {
+    margin-top: .8rem;
+}
+
+.p {
+    font-size: 1.7rem;
+}
+
+.instaLink {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mainContainer {
+        flex-direction: row;
+    }
+
+    .leftSection {
+        width: 50%;
+        flex-direction: column-reverse;
+        gap: 2px;
+    }
+
+    .remoteContainer {
+        width: 35%;
+    }
+
+    .videoContainer {
+        width: 50%;
+        margin-top: 0;
+        align-self: flex-end;
+    }
+
+    .p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mainContainer {
+        padding: 5rem 25vw;
+        gap: 3rem;
+    }
+
+    .videoContainer {
+        display: none;
+    }
+
+    .remoteContainer {
+        width: auto;
+        height: 100%;
+    }
+
+    .leftSection {
+        flex: 1;
+    }
+
+    .rightSection {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .p {
+        font-size: .7rem;
+    }
+
+    .instaLink {
+        display: block;
+    }
+}

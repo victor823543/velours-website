@@ -1,0 +1,225 @@
+.mainContainer {
+    padding: 5rem 2rem;
+}
+
+.p {
+    font-size: 1.5rem;
+}
+
+.span {
+    opacity: .5;
+}
+
+.h1 {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.imageSlider {
+    display: flex;
+    align-items: end;
+    margin: 6rem 0;
+}
+
+.arrowContainer {
+    margin: .6rem;
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.cornerBorders {
+    width: 3rem;
+    height: 3rem;
+
+    --s: 15px;
+    --t: 2px;
+    --g: 12px;
+    
+    padding: calc(var(--g) + var(--t));
+    outline: var(--t) solid black;
+    outline-offset: calc(-1*var(--t));
+    mask:
+        conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+        0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+        linear-gradient(#000 0 0) content-box;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.arrowContainer > img {
+    width: 12rem;
+    height: 6rem;
+    position: absolute;
+    flex: 0 auto;
+    transition: all .3s;
+}
+
+.leftArrow {
+    left: 0px;
+}
+
+.rightArrow {
+    right: 0px;
+}
+
+.leftArrow:hover {
+    transform: translateX(-50%);
+}
+
+.rightArrow:hover {
+    transform: translateX(50%);
+}
+
+.imageContainer {
+    width: 60vw;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.imageContainer > img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.videoTextContainer {
+    display: flex;
+    align-items: end;
+    gap: 2.5rem;
+    margin: 6rem 0;
+}
+
+.videoContainer {
+    width: 45vw;
+}
+
+.videoContainer > video {
+    width: 101%;
+    z-index: -1;
+    border: 5px solid black;
+    border-radius: 14px;
+}
+
+.mediumScreenText {
+    display: none;
+}
+
+.largeScreenText {
+    display: none;
+}
+
+.bottomSection {
+    position: relative;
+    width: 100%;
+}
+
+.instaLinkContainer {
+    display: none;
+}
+
+
+@media (min-width: 768px) {
+    .rightArrowContainer {
+        order: 3;
+        align-self: self-start;
+    }
+
+    .topSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imageSlider {
+        align-self: center;
+    }
+
+    .imageContainer {
+        width: 45vw;
+    }
+
+    .videoTextContainer {
+        justify-content: center;
+    }
+
+    .videoContainer {
+        width: 28vw;
+    }
+
+    .smallScreenText {
+        display: none;
+    }
+
+    .mediumScreenText {
+        display: block;
+    }
+
+    .textContainer {
+        width: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 4rem;
+    }
+
+    .p {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .h1 {
+        font-size: 1.8rem;
+        flex: 1;
+    }
+
+    .p {
+        font-size: 1rem;
+    }
+
+    .topSection {
+        flex-direction: row;
+    }
+
+    .imageContainer {
+        width: 30vw;
+    }
+
+    .mediumScreenText {
+        display: none;
+    }
+
+    .videoContainer {
+        display: none;
+    }
+
+    .textContainer {
+        width: auto;
+    }
+
+    .videoTextContainer {
+        flex: 1;
+        justify-content: start;
+        margin-top: 0;
+    }
+
+    .imageSlider {
+        margin-top: 0;
+    }
+
+    .instaLinkContainer {
+        display: block;
+        position: relative;
+        right: 2rem;
+    }
+
+    .smallScreenLink {
+        display: none;
+    }
+}

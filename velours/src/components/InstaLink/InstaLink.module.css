@@ -1,0 +1,53 @@
+.qrContainer {
+    width: fit-content;
+    display: block;
+}
+
+.qrContainer > img {
+    --s: 15px;
+    --t: 1px;
+    --g: 20px;
+    
+    padding: calc(var(--g) + var(--t));
+    outline: var(--t) solid black;
+    outline-offset: calc(-1*var(--t));
+    mask:
+        conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+        0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+        linear-gradient(#000 0 0) content-box;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.qrContainer > img:hover {
+    outline-offset: -8px;
+}
+
+.instaLink {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.videoContainer {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .videoContainer {
+        display: block;
+        position: fixed;
+        width: 170px;
+        z-index: 1;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+    }
+    
+    .videoContainer > video {
+        width: 101%;
+        z-index: 1;
+        border: 5px solid black;
+        border-radius: 14px;
+    }
+}

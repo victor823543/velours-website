@@ -1,0 +1,47 @@
+.mainContainer {
+    padding: 10rem 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.numberContainer {
+    position: relative;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animatedNumber {
+    font-size: 30rem
+}
+
+.textContainer {
+    position: absolute;
+    width: 8rem;
+    top: 50%;
+    left: 20rem;
+}
+
+.p {
+    font-size: .8rem;
+}
+
+@media (min-width: 480px) {
+    .mainContainer {
+        justify-content: center;
+        padding: 10rem 5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .mainContainer {
+        justify-content: center;
+        padding: 10rem 5rem;
+    }
+
+    .animatedNumber {
+        font-size: 24rem
+    }
+}
