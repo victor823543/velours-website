@@ -44,7 +44,7 @@ const OurClientsSection = () => {
           return () => {
             window.removeEventListener('resize', measureHeight)
           }
-      }, [])
+      }, [elementRef.current])
 
   return (
     <div className={styles.mainContainer}>

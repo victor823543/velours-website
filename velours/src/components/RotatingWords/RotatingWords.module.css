@@ -1,6 +1,6 @@
 
 .rotatingWord {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 400;
     transform-style: preserve-3d;
     perspective: 2000px;
@@ -14,4 +14,10 @@
     align-items: flex-start;
     perspective: 2000px;
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    .rotatingWord {
+        font-size: 4rem;
+    }
 }
